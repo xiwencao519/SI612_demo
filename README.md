@@ -1,114 +1,114 @@
-# 数字乐谱查看器
+# Digital Score Viewer
 
-一个优雅的数字乐谱查看器，专为平板和笔记本设计，提供智能的练习体验和友好的反馈系统。
+An elegant digital score viewer designed for tablets and laptops, providing an intelligent practice experience with a friendly feedback system.
 
-## 功能特性
+## Features
 
-### 🎵 核心功能
-- **数字乐谱查看器** - 支持 PDF 和图片格式的乐谱显示
-- **文件上传** - 选择数字乐谱或模拟扫描纸质乐谱
-- **默认乐谱** - 内置4个示例乐谱，方便快速开始
-- **错误标记** - 轻量、不干扰的标记系统，帮助记录练习中的问题
-- **自动错误跟踪** - 智能检测练习中的可能错误，自动添加标记
-- **章节反馈** - 章节结束时的简单、友好反馈
+### 🎵 Core Features
+- **Digital Score Viewer** - Supports PDF and image format score display
+- **File Upload** - Select digital scores or simulate scanning paper scores
+- **Default Scores** - Built-in 4 sample scores for quick start
+- **Error Marking** - Lightweight, non-intrusive marking system to help record practice issues
+- **Auto Error Tracking** - Intelligently detects possible errors during practice and automatically adds markers
+- **Section Feedback** - Simple, friendly feedback at the end of sections
 
-### 🎯 练习模式
-- **练习模式** - 支持选择乐谱片段进行循环练习
-- **表演模式** - 自动前进，模拟真实表演场景
+### 🎯 Practice Modes
+- **Practice Mode** - Supports selecting score segments for looped practice
+- **Performance Mode** - Automatically advances, simulating real performance scenarios
 
-### 📄 翻页功能
-- 手动翻页控制
-- 自动翻页（表演模式）
-- 语音控制模拟（支持"下一页"等命令）
+### 📄 Page Turning Features
+- Manual page turning controls
+- Auto page turning (Performance Mode)
+- Voice control simulation (supports "next page" and other commands)
 
-### 🤖 自动错误跟踪
-- **智能检测** - 在练习模式下自动检测可能的错误位置
-- **可视化区分** - 自动检测的标记使用橙色显示，手动标记使用黄色
-- **可控制** - 可通过工具栏按钮启用/禁用自动错误跟踪
-- **智能限制** - 每页最多自动检测5个错误，避免过度标记
+### 🤖 Auto Error Tracking
+- **Intelligent Detection** - Automatically detects possible error locations in practice mode
+- **Visual Distinction** - Auto-detected markers displayed in orange, manual markers in yellow
+- **Controllable** - Enable/disable auto error tracking via toolbar button
+- **Smart Limiting** - Maximum 5 auto-detected errors per page to avoid over-marking
 
-## 技术栈
+## Tech Stack
 
-- **React 18** + **TypeScript** - 现代化前端框架
-- **Vite** - 快速构建工具
-- **Tailwind CSS** - 实用优先的 CSS 框架
-- **Zustand** - 轻量级状态管理
-- **React PDF** - PDF 文件渲染
-- **React Router** - 路由管理
-- **Lucide React** - 图标库
+- **React 18** + **TypeScript** - Modern frontend framework
+- **Vite** - Fast build tool
+- **Tailwind CSS** - Utility-first CSS framework
+- **Zustand** - Lightweight state management
+- **React PDF** - PDF file rendering
+- **React Router** - Route management
+- **Lucide React** - Icon library
 
-## 快速开始
+## Quick Start
 
-### 安装依赖
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 开发模式
+### Development Mode
 
 ```bash
 npm run dev
 ```
 
-应用将在 `http://localhost:3000` 启动
+The application will start at `http://localhost:3000`
 
-### 构建生产版本
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-### 预览生产版本
+### Preview Production Build
 
 ```bash
 npm run preview
 ```
 
-## 项目结构
+## Project Structure
 
 ```
 SI612_demo/
 ├── src/
-│   ├── components/        # UI组件
-│   │   ├── ScoreViewer/   # 乐谱查看器
-│   │   ├── Toolbar/       # 工具栏
-│   │   ├── Marker/        # 标记组件
-│   │   └── Feedback/       # 反馈组件
-│   ├── pages/             # 页面组件
-│   ├── hooks/             # 自定义Hooks
-│   ├── store/             # 状态管理
-│   ├── types/             # TypeScript类型
+│   ├── components/        # UI Components
+│   │   ├── ScoreViewer/   # Score viewer
+│   │   ├── Toolbar/       # Toolbar
+│   │   ├── Marker/        # Marker components
+│   │   └── Feedback/      # Feedback components
+│   ├── pages/             # Page components
+│   ├── hooks/             # Custom Hooks
+│   ├── store/             # State management
+│   ├── types/             # TypeScript types
 │   └── App.tsx
-├── public/                # 静态资源
+├── public/                # Static assets
 └── package.json
 ```
 
-## 使用说明
+## Usage Instructions
 
-1. **选择乐谱** - 在首页选择默认示例乐谱，或上传您自己的乐谱文件
-2. **查看乐谱** - 使用鼠标滚轮（Ctrl/Cmd + 滚轮）缩放乐谱
-3. **添加标记** - 点击乐谱上的位置手动添加标记
-4. **自动错误跟踪** - 在练习模式下点击播放，系统会自动检测可能的错误并添加标记（橙色标记）
-5. **切换模式** - 在工具栏切换"练习模式"和"表演模式"
-6. **循环练习** - 在练习模式下选择区域进行循环
-7. **语音控制** - 启用语音控制后，说"下一页"可以翻页（模拟）
-8. **管理标记** - 在右侧标记面板查看和管理所有标记，可以删除不需要的标记
+1. **Select Score** - Choose default sample scores on the home page, or upload your own score files
+2. **View Score** - Use mouse wheel (Ctrl/Cmd + wheel) to zoom the score
+3. **Add Markers** - Click on positions on the score to manually add markers
+4. **Auto Error Tracking** - Click play in practice mode, the system will automatically detect possible errors and add markers (orange markers)
+5. **Switch Modes** - Toggle between "Practice Mode" and "Performance Mode" in the toolbar
+6. **Loop Practice** - Select areas for looping in practice mode
+7. **Voice Control** - After enabling voice control, say "next page" to turn pages (simulated)
+8. **Manage Markers** - View and manage all markers in the right marker panel, delete unwanted markers
 
-## 模拟功能
+## Simulated Features
 
-- **扫描功能** - 显示上传界面，模拟扫描流程
-- **语音控制** - 显示语音识别 UI，模拟识别"下一页"等命令
-- **章节检测** - 基于页面或手动标记
-- **反馈生成** - 基于标记数量等简单规则生成友好反馈
+- **Scanning Feature** - Displays upload interface, simulates scanning process
+- **Voice Control** - Displays voice recognition UI, simulates recognizing "next page" and other commands
+- **Section Detection** - Based on pages or manual markers
+- **Feedback Generation** - Generates friendly feedback based on simple rules like marker count
 
-## 浏览器支持
+## Browser Support
 
-- Chrome (推荐)
+- Chrome (Recommended)
 - Firefox
 - Safari
 - Edge
 
-## 许可证
+## License
 
 MIT
